@@ -38,6 +38,6 @@ public class Baraja {
     public void printBaraja()
     {
         for(Carta carta : this.cartas)
-            System.out.println(carta.getPalo() + " de " + carta.getNumero() + " Valor: " + carta.getValor());
+            System.out.println(carta.getPalo() + " de " + carta.getNumero());
     }
 }
