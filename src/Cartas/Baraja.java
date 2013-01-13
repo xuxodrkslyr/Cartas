@@ -8,6 +8,9 @@ package Cartas;
  *
  * @author xuxo
  */
+
+import java.util.Random;
+
 public class Baraja {
     
     private Carta cartas[];
@@ -39,5 +42,17 @@ public class Baraja {
     {
         for(Carta carta : this.cartas)
             System.out.println(carta.getPalo() + " de " + carta.getNumero());
+    }
+    
+    public void revolverBaraja()
+    {
+        Random r = new Random();
+        for(int i = 0; i < this.cartas.length; i++)
+        {
+            int rand = r.nextInt(this.cartas.length);
+            Carta tmp = this.cartas[i];
+            this.cartas[i] = this.cartas[rand];
+            this.cartas[rand] = tmp;
+        }
     }
 }
